@@ -1,3 +1,6 @@
+Yii 2 Migration Generator
+=========================
+
 Migration generator for Gii. Generates migration file for the specified database table.
 
 Place these files into "common/modules/gii" directory.
@@ -11,7 +14,7 @@ if (!YII_ENV_TEST) {
     $config['modules']['gii'] = include(Yii::getAlias('@common/modules/gii/config.php'));
 }
 ```
-
+<br>
 
 Example:
 
@@ -36,7 +39,7 @@ CREATE TABLE `log` (
 )
 COMMENT='Log of model changes';
 ```
-
+<br>
 
 Result:
 
@@ -80,7 +83,7 @@ class m160210_040000_create_log extends yii\db\Migration
 }
 
 ```
-
+<br>
 
 Example:
 
@@ -92,7 +95,7 @@ CREATE TABLE session
     data BLOB
 )
 ```
-
+<br>
 
 Result:
 
@@ -121,9 +124,9 @@ class m160210_040000_create_session extends yii\db\Migration
 }
 
 ```
+<br>
 
-
-There are 2 code templates - 'default' and 'sql'. Default template generates migration calls of migration funcitons. Sql template generates direct call SQL code of 'SHOW CREATE TABLE' result.
+There are 2 code templates - 'default' and 'sql'. Default template generates migration calls of migration funcitons. Sql template generates direct call of SQL code of 'SHOW CREATE TABLE' result.
 
 ```php
 class m160210_043736_create_log extends yii\db\Migration
@@ -160,7 +163,7 @@ class m160210_043736_create_log extends yii\db\Migration
     }
 }
 ```
-
+<br>
 
 ```php
 class m160210_040000_create_session extends yii\db\Migration
